@@ -1,14 +1,13 @@
-/* --- Cuadrícula 3x2 centrada --- */
 .galeria-tienda {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px 30px; /* espacio entre filas y columnas */
+    gap: 40px 30px; 
     justify-items: center;
     align-items: center;
     margin-top: 30%;
 }
 .tienda {
-    margin-bottom: 80px; /* separa los cuadros del footer */
+    margin-bottom: 80px; 
 }
 
 .producto {
@@ -20,7 +19,7 @@
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     
-    /* Estructura vertical */
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,7 +28,6 @@
     position: relative;
 }
 
-/* Imagen */
 .producto img {
     width: 100%;
     height: 160px;
@@ -38,14 +36,13 @@
     margin-bottom: 10px;
 }
 
-/* Título */
 .producto h3 {
     margin: 5px 0;
     font-size: 1em;
     color: #222;
 }
 
-/* Precio */
+
 .producto p {
     margin: 4px 0 10px;
     color: #444;
@@ -53,7 +50,7 @@
     font-size: 0.9em;
 }
 
-/* Botón de comprar — fijo al fondo del cuadro */
+
 .producto button {
     background-color: #444;
     color: white;
@@ -65,7 +62,7 @@
     font-family: "Poppins", sans-serif;
     font-size: 0.9em;
 
-    /* fija el botón al fondo del cuadro */
+   
     position: absolute;
     bottom: 15px;
     left: 50%;
@@ -77,4 +74,5 @@
     background-color: #666;
     transform: translateX(-50%) scale(1.05);
 }
+
 
