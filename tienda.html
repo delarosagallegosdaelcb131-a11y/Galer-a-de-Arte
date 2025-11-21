@@ -73,11 +73,40 @@
         </div>
     </section>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const botones = document.querySelectorAll(".producto button");
+
+    botones.forEach(button => {
+        button.addEventListener("click", () => {
+
+            let nombre = button.parentElement.querySelector("h3").textContent;
+            let precio = button.parentElement.querySelector("p").textContent;
+
+            let producto = {
+                nombre: nombre,
+                precio: precio
+            };
+
+            // Obtener carrito o crearlo si no existe
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+            carrito.push(producto);
+
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+
+            alert("Producto agregado al carrito");
+        });
+    });
+});
+</script>
+    
     <footer>
         Contactanos para sugerencias: Email - adayinthelifegalery@gmail.com.mx
     </footer>
 </body>
 </html>
+
 
 
 
