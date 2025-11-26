@@ -22,7 +22,6 @@ body {
 }
 
 .expo:hover {
-    transform: translateY(-8px);
     box-shadow: 0 10px 22px rgba(0,0,0,0.18);
 }
 
@@ -79,5 +78,6 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
 
 
