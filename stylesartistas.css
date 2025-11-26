@@ -1,86 +1,88 @@
-.artists-section {
-    padding: 40px 5%;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-}
-
-.artists-grid {
+.contenedor-artistas {
+    width: 95%;
+    max-width: 1100px;
+    margin: 50px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
 }
 
-.artist-card {
-    background: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
+.artista-card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     text-align: center;
-    padding-bottom: 15px;
     transition: 0.3s;
-    box-shadow: 0 2px 10px #0002;
+    cursor: pointer;
 }
 
-.artist-card img {
+.artista-card:hover {
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.artista-card img {
     width: 100%;
-    height: 250px;
+    height: 320px;    
     object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
 
-.artist-card h3 {
-    font-size: 1.1rem;
-    margin: 10px 0;
+
+.artista-card h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
 }
 
-.artist-card h3 span {
-    font-weight: normal;
-    font-size: 0.9rem;
+.artista-card span {
     color: #555;
+    font-size: 15px;
 }
 
-.btn-more {
-    padding: 8px 15px;
-    border: none;
-    background: #222;
+.btn-artista {
+    margin-top: 12px;
+    padding: 8px 14px;
+    background: #000;
     color: white;
-    border-radius: 6px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.btn-more:hover {
-    background: #444;
+.btn-artista:hover {
+    background: #333;
 }
 
-/* MODAL */
-.modal {
+.modal-artista {
     display: none;
     position: fixed;
-    top: 0;
+    z-index: 9999;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.75);
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    background: rgba(0,0,0,0.85);
 }
 
-.modal-content {
+.modal-contenido-artista {
     background: white;
-    padding: 25px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 15px;
     width: 95%;
     max-width: 600px;
+    margin: 70px auto;
     max-height: 80vh;
     overflow-y: auto;
 }
 
-.close-modal {
-    float: right;
-    font-size: 28px;
+.cerrar-artista {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: white;
+    font-size: 38px;
     cursor: pointer;
 }
