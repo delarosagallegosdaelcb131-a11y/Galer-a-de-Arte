@@ -1,53 +1,97 @@
-.subtitulo {
-    font-size: 18px;
-    color: #555;
+/* ============================= */
+/*     ESTILOS DE EXPOSICIONES   */
+/* ============================= */
+
+body {
+    background: #f2f2f2;
 }
 
+/* Contenedor principal */
 .contenedor-exposiciones {
-    width: 90%;
-    max-width: 800px;
-    margin: 40px auto;
+    width: 95%;
+    max-width: 900px;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 45px; /* Separación entre cada obra */
 }
 
+/* Cada cuadro de exposición */
 .expo {
     background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     text-align: center;
+    transition: 0.3s;
     width: 100%;
 }
 
+/* Efecto al pasar el mouse */
 .expo:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
 }
 
+/* Imagen principal */
 .expo img {
     width: 100%;
-    height: auto;   
-    border-radius: 12px;
-    display: block;
-    margin: 0 auto 15px auto;
+    max-height: 550px;
+    object-fit: contain;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    cursor: zoom-in;
 }
 
+/* Títulos */
 .expo h2 {
-    margin: 0 0 10px;
-    font-size: 24px;
+    font-size: 28px;
+    margin-bottom: 8px;
 }
 
+/* Descripción */
 .expo p {
-    font-size: 15px;
-    color: #444;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
+/* Fecha o texto destacado */
 .fecha {
-    margin-top: 10px;
+    margin-top: 12px;
     font-weight: bold;
     color: #9a2c2c;
 }
 
+/* ============================= */
+/*          MODAL IMÁGENES        */
+/* ============================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+}
+
+.modal-contenido {
+    margin: auto;
+    display: block;
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 15px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
