@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="stylesexposiciones.css">
 </head>
+    <!-- MODAL PARA IMÁGENES -->
+<div id="modal" class="modal">
+    <span class="cerrar">&times;</span>
+    <img class="modal-contenido" id="imagen-grande">
+</div>
+
 <body>
      <header>
         <h1>Galería de Arte A Day In The Life</h1>
@@ -135,6 +141,27 @@
 
     </main>
 
+    <script>
+document.querySelectorAll(".expo img").forEach(img => {
+    img.addEventListener("click", function() {
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("imagen-grande").src = this.src;
+    });
+});
+
+document.querySelector(".cerrar").onclick = function() {
+    document.getElementById("modal").style.display = "none";
+};
+
+// Cerrar modal al hacer clic afuera
+window.onclick = function(e) {
+    if (e.target == document.getElementById("modal")) {
+        document.getElementById("modal").style.display = "none";
+    }
+}
+</script>
+
+
     <footer>
         Contactanos para sugerencias: Email - adayinthelifegalery@gmail.com.mx
     <footer>
@@ -142,6 +169,7 @@
 </body>
 
 </html>
+
 
 
 
