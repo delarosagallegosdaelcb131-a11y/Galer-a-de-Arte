@@ -24,6 +24,85 @@
             <li><a href="mapa.html" class="activo">Ubicacion</a></li>
         </ul>
     </nav>
+    <section class="artists-section">
+    <h2 class="section-title">Artistas Destacados</h2>
+
+    <div class="artists-grid">
+
+        <div class="artist-card">
+            <img src="Goya.jpg" alt="Francisco de Goya">
+            <h3>Francisco de Goya <span>(1746–1828)</span></h3>
+            <button class="btn-more" onclick="showArtist(0)">Ver más</button>
+        </div>
+
+        <div class="artist-card">
+            <img src="VanGogh.jpg" alt="Vincent van Gogh">
+            <h3>Vincent van Gogh <span>(1853–1890)</span></h3>
+            <button class="btn-more" onclick="showArtist(1)">Ver más</button>
+        </div>
+
+        <div class="artist-card">
+            <img src="DaVinci.jpg" alt="Leonardo da Vinci">
+            <h3>Leonardo da Vinci <span>(1452–1519)</span></h3>
+            <button class="btn-more" onclick="showArtist(2)">Ver más</button>
+        </div>
+
+        <div class="artist-card">
+            <img src="GustavKlimt.jpg" alt="Gustav Klimt">
+            <h3>Gustav Klimt <span>(1862–1918)</span></h3>
+            <button class="btn-more" onclick="showArtist(3)">Ver más</button>
+        </div>
+
+        <div class="artist-card">
+            <img src="Vermeer.jpg" alt="Johannes Vermeer">
+            <h3>Johannes Vermeer <span>(1632–1675)</span></h3>
+            <button class="btn-more" onclick="showArtist(4)">Ver más</button>
+        </div>
+
+        <div class="artist-card">
+            <img src="Monet.jpg" alt="Claude Monet">
+            <h3>Claude Monet <span>(1840–1926)</span></h3>
+            <button class="btn-more" onclick="showArtist(5)">Ver más</button>
+        </div>
+
+        <div class="artist-card">
+            <img src="Renoir.jpg" alt="Pierre-Auguste Renoir">
+            <h3>Pierre-Auguste Renoir <span>(1841–1919)</span></h3>
+            <button class="btn-more" onclick="showArtist(6)">Ver más</button>
+        </div>
+
+        <div class="artist-card">
+            <img src="miguelAngel.jpg" alt="Miguel Ángel">
+            <h3>Miguel Ángel <span>(1475–1564)</span></h3>
+            <button class="btn-more" onclick="showArtist(7)">Ver más</button>
+        </div>
+
+        <div class="artist-card">
+            <img src="bouguereau.jpg" alt="Bouguereau">
+            <h3>William-Adolphe Bouguereau <span>(1825–1905)</span></h3>
+            <button class="btn-more" onclick="showArtist(8)">Ver más</button>
+        </div>
+
+        <div class="artist-card">
+            <img src="WilliamTurner.jpg" alt="Turner">
+            <h3>Joseph Mallord William Turner <span>(1775–1851)</span></h3>
+            <button class="btn-more" onclick="showArtist(9)">Ver más</button>
+        </div>
+
+    </div>
+</section>
+
+<div id="artistModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">×</span>
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
+
+        <h3>Obras destacadas:</h3>
+        <ul id="modalWorks"></ul>
+    </div>
+</div>
+
 
     <footer>
         Contactanos para sugerencias: Email - adayinthelifegalery@gmail.com.mx
@@ -32,3 +111,4 @@
 </body>
 
 </html>
+
