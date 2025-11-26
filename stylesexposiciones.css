@@ -1,0 +1,60 @@
+.subtitulo {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Contenedor */
+.contenedor-exposiciones {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+
+/* Tarjetas de exposiciones */
+.expo {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+    width: 100%;
+}
+
+
+.expo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.expo img {
+    width: 100%;
+    height: auto;      /* <-- Esta línea hace que el cuadro se adapte */
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+
+
+
+.expo h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.expo p {
+    font-size: 15px;
+    color: #444;
+}
+
+.fecha {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #9a2c2c;
+}
