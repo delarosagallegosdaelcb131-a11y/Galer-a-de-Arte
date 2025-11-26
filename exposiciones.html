@@ -65,14 +65,16 @@
 <section class="expo">
     <img src="images/p5.jpg" alt="Obra 5">
     <h2>Saturno devorando a un hijo</h2>
-    <p>Descripción breve de la obra.</p>
+    <p>Goya representó el tema mitológico de Saturno, dios del tiempo, que devoraba a los hijos que iba teniendo con su esposa, según nacían; hasta que ésta impidió que matara al último de ellos, Zeus, quien, ya adulto, acabó con su padre logrando que vomitara a sus hermanos. La pintura nos muestra el terrible momento en que desgarra y engulle a uno de sus hijos. Parece traspasarlo con la fuerza de sus manos, como demuestra la sangre entre sus dedos.
+    
+Se trata de una pintura muy simple, que casi raya la abstracción, en la que destaca el intenso expresionismo de la cabeza de Saturno. Posee una gran calidad plástica con fuertes y vigorosas pinceladas, bajo las que se esconde un dibujo perfecto, como indica Gudiol. Es una pintura de contrastes ya que la figura del dios sobresale de un espacio oscuro y neutro, casi irreal. Los rojos de la sangre destacan sobre los negros y grises, logrando un efecto pavoroso.</p>
     <p class="fecha">Fecha o periodo</p>
 </section>
 
 <section class="expo">
     <img src="images/p6.jpg" alt="Obra 6">
     <h2>Judith y Holofernes</h2>
-    <p>Descripción breve de la obra.</p>
+    <p>Se representa la escena bíblica en la que Judith corta la cabeza del caudillo asirio Holofernes. Goya se aleja de la iconografía tradicional del suceso por lo que prescinde de los atributos bíblicos. No aparecen las joyas y riquezas del relato sino que se centra en la acción. De hecho la imagen de Judith podría ser la de una mujer de la época de Goya. El artista nos presenta un lugar impreciso, en lugar del habitual escenario de la tienda de Holofernes. Éste apenas se intuye, tan solo se averigua ligeramente su cabeza en el ángulo inferior derecho. Goya focaliza la atención en la figura de Judith, justo en el momento después de haber acabado con su adversario, por eso aún sostiene sobre su mano derecha el arma homicida. La iluminación se aglutina en ella, dejando a la sirvienta o cómplice que la acompaña en penumbra. La luz contornea los volúmenes, su rostro, el brazo, el busto y la mano con la que sostiene el cuchillo.</p>
     <p class="fecha">Fecha o periodo</p>
 </section>
 
@@ -147,7 +149,6 @@ Con unos pocos trazos es capaz de representar al perro, que destaca del resto de
 
     </main>
 
-    <!-- Modal para ver imágenes -->
 <div id="modalImagen" class="modal">
     <span class="cerrar">&times;</span>
     <img class="modal-contenido" id="imgModal">
@@ -158,7 +159,6 @@ const modal = document.getElementById("modalImagen");
 const modalImg = document.getElementById("imgModal");
 const cerrar = document.querySelector(".cerrar");
 
-// Cuando se da clic en una imagen
 document.querySelectorAll(".expo img").forEach(img => {
     img.addEventListener("click", () => {
         modal.style.display = "block";
@@ -166,17 +166,14 @@ document.querySelectorAll(".expo img").forEach(img => {
     });
 });
 
-// Cerrar el modal
 cerrar.onclick = () => {
     modal.style.display = "none";
 };
 
-// Cerrar si hacen clic fuera de la imagen
 modal.onclick = (e) => {
     if (e.target === modal) modal.style.display = "none";
 };
 </script>
-
 
     <footer>
         Contactanos para sugerencias: Email - adayinthelifegalery@gmail.com.mx
@@ -184,6 +181,3 @@ modal.onclick = (e) => {
 
 </body>
 </html>
-
-
-
