@@ -88,8 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 nombre: nombre,
                 precio: precio
             };
-
-            // Obtener carrito o crearlo si no existe
+            
             let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
             carrito.push(producto);
@@ -107,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </footer>
 </body>
 </html>
+
 
 
 
