@@ -1,25 +1,21 @@
-/* Fondo general */
 body {
     background: #f2f2f2;
 }
 
-/* CONTENEDOR PRINCIPAL (ajustado para dar más espacio desde el menú) */
 .contenedor-exposiciones {
     width: 95%;
     max-width: 900px;
-    margin: 90px auto;     /* ⭐ Antes 50px — ahora más separación del menú */
+    margin: 90px auto;    
     display: flex;
     flex-direction: column;
     gap: 45px;
 }
 
-/* TARJETA BASE DE ARTISTA */
 .expo {
     background: #ffffff;
     padding: 25px;
     border-radius: 18px;
 
-    /* ⭐ Estilo igual al de la sección "Propósito" */
     border: 2px solid #e5e5e5;
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 
@@ -33,15 +29,13 @@ body {
     border-color: #bbbbbb;
 }
 
-/* ⭐ Ajuste exclusivo para las tarjetas de artistas */
 .expo.artista {
     padding-bottom: 30px;
 }
 
-/* ⭐ IMÁGENES MÁS PEQUEÑAS + BORDE + UNIFORMES */
 .expo.artista img {
     width: 100%;
-    height: 250px;          /* ⭐ Antes 330px — ahora más pequeñas */
+    height: 250px;         
     object-fit: cover;
     object-position: center;
     border-radius: 15px;
@@ -49,10 +43,10 @@ body {
     margin-bottom: 15px;
     cursor: zoom-in;
 
-    border: 2px solid #e5e5e5; /* ⭐ Igual que las tarjetas */
+    border: 2px solid #e5e5e5; 
 }
 
-/* Títulos de artistas */
+
 .expo.artista h3 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -64,12 +58,10 @@ body {
     color: #666;
 }
 
-/* (Opcional) Si ya no usas el botón más */
 .btn-more {
     display: none;
 }
 
-/* MODAL */
 .modal {
     display: none;
     position: fixed;
@@ -95,3 +87,4 @@ body {
     font-size: 32px;
     cursor: pointer;
 }
+
