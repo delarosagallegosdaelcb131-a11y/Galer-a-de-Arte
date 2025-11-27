@@ -1,56 +1,56 @@
+/* Fondo general */
 body {
     background: #f2f2f2;
 }
 
+/* Contenedor principal */
 .contenedor-exposiciones {
     width: 95%;
-    max-width: 900px;
-    margin: 90px auto;    
+    max-width: 1100px;
+    margin: 60px auto;
     display: flex;
     flex-direction: column;
     gap: 45px;
 }
 
-.expo {
-    background: #ffffff;
+/* Tarjeta estilo artista */
+.expo.artista {
+    background: white;
     padding: 25px;
     border-radius: 18px;
-
-    border: 2px solid #e5e5e5;
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-
-    text-align: center;
+    border: 2px solid #cfcfcf;
+    display: flex;
+    flex-direction: row;   /* 🔥 Imagen a la izquierda, texto a la derecha */
+    align-items: center;
+    gap: 25px;
     transition: 0.3s;
-    width: 100%;
 }
 
-.expo:hover {
+.expo.artista:hover {
     box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-    border-color: #bbbbbb;
+    border-color: #999;
 }
 
-.expo.artista {
-    padding-bottom: 30px;
-}
-
+/* Imagen a la izquierda — más pequeña pero completa */
 .expo.artista img {
-    width: 100%;
-    height: 250px;         
+    width: 260px;         /* 🔥 Ajusta si la quieres más grande/pequeña */
+    height: 260px;
     object-fit: cover;
-    object-position: center;
-    border-radius: 15px;
-    
-    margin-bottom: 15px;
-    cursor: zoom-in;
-
-    border: 2px solid #e5e5e5; 
+    border-radius: 12px;
+    border: 2px solid #dcdcdc;
 }
 
+/* Contenedor del texto */
+.artist-info {
+    flex: 1;
+}
 
+/* Títulos */
 .expo.artista h3 {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 10px;
-    color: #222;
+    text-align: left;
 }
 
 .expo.artista h3 span {
@@ -58,10 +58,12 @@ body {
     color: #666;
 }
 
+/* Eliminamos el botón (por si quedó) */
 .btn-more {
     display: none;
 }
 
+/* Modal — sin cambios */
 .modal {
     display: none;
     position: fixed;
@@ -87,4 +89,3 @@ body {
     font-size: 32px;
     cursor: pointer;
 }
-
