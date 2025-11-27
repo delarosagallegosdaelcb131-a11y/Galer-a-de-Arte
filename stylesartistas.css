@@ -1,10 +1,10 @@
-/* ======== ESTILO GENERAL ======== */
+/* Fondo general */
 body {
     background: #f2f2f2;
 }
 
-/* ======== CONTENEDOR PRINCIPAL ======== */
-.contenedor-artistas {
+/* Contenedor principal (igual que exposiciones) */
+.contenedor-exposiciones {
     width: 95%;
     max-width: 900px;
     margin: 50px auto;
@@ -13,83 +13,90 @@ body {
     gap: 45px;
 }
 
-/* ======== TARJETAS DE ARTISTA ======== */
-.artista {
+/* Tarjeta base de exposición / artista */
+.expo {
     background: white;
     padding: 25px;
     border-radius: 18px;
-    border: 2px solid #dcdcdc;      /* 🔹 Borde visible */
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     text-align: center;
     transition: 0.3s;
     width: 100%;
+    border: 2px solid #cfcfcf; /* ⭐ Borde visible agregado */
 }
 
-.artista:hover {
+.expo:hover {
     box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-    transform: translateY(-3px);     /* 🔹 Efecto bonito */
+    border-color: #999; /* ⭐ Borde se marca un poquito al pasar el mouse */
 }
 
-/* ======== IMÁGENES UNIFORMES ======== */
-.artista img {
+/* ⭐ Ajuste exclusivo para las tarjetas de artistas */
+.expo.artista {
+    padding-bottom: 30px;
+}
+
+/* ⭐ Todas las imágenes tendrán EXACTAMENTE el mismo tamaño */
+.expo.artista img {
     width: 100%;
-    height: 350px;             /* 🔹 Todas las imágenes igual tamaño */
-    object-fit: cover;         /* Recorta sin deformar */
+    height: 330px;       /* ⭐ Todas iguales */
+    object-fit: cover;   /* Recorta manteniendo proporción */
     object-position: center;
     border-radius: 15px;
-    border: 2px solid #cfcfcf; /* 🔹 Borde visible en foto */
     margin-bottom: 15px;
+    cursor: zoom-in;
+    border: 2px solid #dcdcdc; /* Borde ligero a la imagen */
 }
 
-/* ======== TITULOS ======== */
-.artista h2 {
-    font-size: 28px;
-    margin-bottom: 5px;
+/* Títulos de artistas */
+.expo.artista h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
 }
 
-/* ======== FECHAS ======== */
-.artista .fecha-artista {
+.expo.artista h3 span {
     font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
+    color: #666;
 }
 
-/* ======== BOTÓN VER MÁS ======== */
-.boton-artista {
-    background: #2c2c2c;
-    color: white;
-    padding: 12px 22px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 16px;
-}
-
-.boton-artista:hover {
+/* Botón 'Ver más' */
+.btn-more {
+    padding: 10px 18px;
     background: #000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-/* ======== DESCRIPCIÓN OCULTA ======== */
-.descripcion-artista {
+.btn-more:hover {
+    background: #444;
+}
+
+/* Modal */
+.modal {
     display: none;
-    margin-top: 15px;
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: justify;
-    padding: 15px;
-    background: #fafafa;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+    background: white;
+    margin: 80px auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 600px;
     border-radius: 12px;
-    border: 1px solid #dcdcdc;
 }
 
-/* ======== LISTA DE OBRAS ======== */
-.obras-artista {
-    margin-top: 12px;
-    font-size: 16px;
-}
-
-.obras-artista li {
-    margin: 4px 0;
+.close-modal {
+    float: right;
+    font-size: 32px;
+    cursor: pointer;
 }
