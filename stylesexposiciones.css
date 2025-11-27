@@ -5,7 +5,7 @@ body {
 .contenedor-exposiciones {
     width: 95%;
     max-width: 900px;
-    margin: 50px auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     gap: 45px; 
@@ -78,6 +78,7 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
 
 
 
