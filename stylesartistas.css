@@ -3,11 +3,11 @@ body {
     background: #f2f2f2;
 }
 
-/* Contenedor principal (igual que exposiciones) */
+/* Contenedor separado del menú */
 .contenedor-exposiciones {
     width: 95%;
     max-width: 900px;
-    margin: 50px auto;
+    margin: 80px auto;  /* ⭐ Se aumentó para que no quede pegado al menú */
     display: flex;
     flex-direction: column;
     gap: 45px;
@@ -22,32 +22,31 @@ body {
     text-align: center;
     transition: 0.3s;
     width: 100%;
-    border: 2px solid #cfcfcf; /* ⭐ Borde visible agregado */
+    border: 2px solid #cfcfcf;
 }
 
 .expo:hover {
     box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-    border-color: #999; /* ⭐ Borde se marca un poquito al pasar el mouse */
+    border-color: #999;
 }
 
-/* ⭐ Ajuste exclusivo para las tarjetas de artistas */
+/* Ajuste exclusivo para artistas */
 .expo.artista {
     padding-bottom: 30px;
 }
 
-/* ⭐ Todas las imágenes tendrán EXACTAMENTE el mismo tamaño */
+/* ⭐ Todas las imágenes con el mismo tamaño */
 .expo.artista img {
     width: 100%;
-    height: 330px;       /* ⭐ Todas iguales */
-    object-fit: cover;   /* Recorta manteniendo proporción */
+    height: 300px;
+    object-fit: cover;
     object-position: center;
     border-radius: 15px;
     margin-bottom: 15px;
-    cursor: zoom-in;
-    border: 2px solid #dcdcdc; /* Borde ligero a la imagen */
+    border: 2px solid #dcdcdc;
 }
 
-/* Títulos de artistas */
+/* Títulos */
 .expo.artista h3 {
     font-size: 24px;
     margin-bottom: 12px;
@@ -58,45 +57,11 @@ body {
     color: #666;
 }
 
-/* Botón 'Ver más' */
-.btn-more {
-    padding: 10px 18px;
-    background: #000;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.btn-more:hover {
-    background: #444;
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.85);
-}
-
-.modal-content {
-    background: white;
-    margin: 80px auto;
-    padding: 25px;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 12px;
-}
-
-.close-modal {
-    float: right;
-    font-size: 32px;
-    cursor: pointer;
+/* ⭐ Descripción dentro de la tarjeta */
+.descripcion-artista {
+    font-size: 16px;
+    color: #444;
+    margin-top: 10px;
+    line-height: 1.5;
+    text-align: justify;
 }
